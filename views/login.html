@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog-API Login</title>
+
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/estilos_login.css" rel="stylesheet">
+    <script src="../assets/js/js.js"></script>
+    <script src="../assets/js/funciones.js"></script>
+    <script src="../app/login.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="contact-form">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <form>
+                    <h1>
+                        <ion-icon name="laptop"></ion-icon>
+                        Blog-API
+                    </h1>
+
+
+                    <div class="form-group">
+                        <label><b>Usuario</b></label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <ion-icon name="person" style="font-size:20px; margin-top:-5px;"></ion-icon>
+                                </span>
+                            </div>
+                            <input id="txt_user" type="text" class="form-control" placeholder="Escriba el usuario"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Contraseña</b></label>
+                       
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <ion-icon name="key" style="font-size:20px;"></ion-icon>
+                                </span>
+                            </div>
+                            <input id="txt_pass" type="password" class="form-control" placeholder="Escriba la contraseña"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <span class="glyphicon gl"></span>
+                    <button type="button" class="btn btn-info btn-block" id="btn_login"><i class="	glyphicon glyphicon-log-in"></i>
+                        Iniciar Sesión</button>
+                    <p class="text-left"><a href="../views/registro_usuario.html"><ion-icon name="person-add"></ion-icon> Registrarse</a></p>
+                    <br>
+                    <div id="mensaje"></div>
+                </form>
+
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

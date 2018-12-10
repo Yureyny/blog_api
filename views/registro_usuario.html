@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog-API Login</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/estilos_login.css" rel="stylesheet">
+    <script src="../assets/js/js.js"></script>
+    <script src="../assets/js/funciones.js"></script>
+    <script src="../app/registro.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+
+</head>
+
+<body>
+    <div class="contact-form">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+
+                <form>
+                    <h1><ion-icon name="person"></ion-icon>
+                        Registro de usuario</h1>
+
+                    <div class="form-group">
+                        <label><b>Usuario</b></label>
+
+
+                        <input type="text" class="form-control" placeholder="Escriba el usuario" id="txt_nombre">
+
+                    </div>
+                    <div class="form-group">
+                        <label><b>Correo Electrónico</b></label>
+
+
+                        <input type="text" class="form-control" placeholder="Escriba el correo" id="txt_email">
+
+                    </div>
+                    <div class="form-group">
+                        <label><b>Contraseña</b></label>
+
+
+                        <input type="password" class="form-control" placeholder="Escriba la contraseña" id="txt_clave1">
+
+                    </div>
+                    <div class="form-group">
+                        <label><b>Confrimar Contraseña</b></label>
+
+
+                        <input type="password" class="form-control" placeholder="Confirmar la contraseña" id="txt_clave2">
+
+                    </div>
+
+                    <button type="button" class="btn btn-info btn-block" id="btn_registrar"><i class="	glyphicon glyphicon-floppy-disk"></i>
+                        Registrar Usuario</button>
+                        <p class="text-left"><a href="../views/login.html"> <ion-icon name="log-in"></ion-icon> Iniciar Sesion</a></p>
+                    <br>
+                    <div id="mensaje">
+
+                    </div>
+
+                </form>
+
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

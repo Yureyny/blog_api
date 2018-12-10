@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+  <title>Blog API - Home</title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/sticky-footer-navbar.css" rel="stylesheet">
+  <link href="../assets/css/estilos_post.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">
+            <ion-icon name="aperture"></ion-icon>Blog-API
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="view_usuario.html" id='nav_mis_post'>
+                  <ion-icon name="bookmarks"></ion-icon>Mis Publicaciones <span class="sr-only"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">
+                  <ion-icon name="albums"></ion-icon>Publicaciones
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="crear_post.html">
+                    <ion-icon name="quote"></ion-icon>Nuevo Post
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modal_cerrar_sesion">
+                  <ion-icon name="log-out"></ion-icon>Cerrar Sesion
+                </a>
+              </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+
+
+  <main role="main" class="container">
+    <!-- encabezado pagina -->
+    <br>
+    <h2 class="text-center">
+      <ion-icon name="reorder"></ion-icon> Perfil de Usuario
+    </h2>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" id="txtnombre" readonly>
+
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="text" class="form-control" id="txtemail" readonly>
+
+          </div>
+
+
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label>Cant. Post:</label>
+            <input type="text" class="form-control" id="txtcantidad" readonly>
+
+          </div>
+          <div class="form-group">
+            <label>Fecha Inicio:</label>
+            <input type="text" class="form-control" id="txtfechaini" readonly>
+
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+
+    <h4 class="text-left">
+      <ion-icon name="reorder"></ion-icon> Listado de Posts
+    </h4>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="listado">
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div id="prueba"></div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Realizado por Yureyny Madera Vargas</span>
+    </div>
+  </footer>
+
+
+  <!-- Modal cerrar sesion -->
+  <div class="modal fade" id="modal_cerrar_sesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <ion-icon name="log-out"></ion-icon> Logout
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Esta seguro que desea cerrar la sesion?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="si_cerrar_sesion">
+            <ion-icon name="checkmark-circle-outline"></ion-icon> Si
+          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <ion-icon name="close-circle-outline"></ion-icon> No
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/js.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/funciones.js"></script>
+  <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+
+  <script src="../app/view_user.js"></script>
+  <script>
+      $(document).ready(function () {
+        $('#nav_mis_post').click(function (e) {
+          let id = JSON.parse(localStorage.getItem('datosuser')).id;
+          localStorage.setItem('user_sel', id);
+        });
+        $('#si_cerrar_sesion').click(function (e) {
+          logout();
+        });
+      });
+    </script>
+</body>
+
+</html>
